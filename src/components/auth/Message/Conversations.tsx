@@ -20,7 +20,7 @@ interface ResponsiveChatProps {
   user: User
 }
 
-const pages = ['Conversations', 'My Bookings', 'Availability','PremiumBooking'];
+const pages = ['Conversations', 'My Bookings', 'Availability','PremiumBooking','My Bookings'];
 const settings = ['Account Dashboard', 'Change Password', 'Logout'];
 
 const Navbar: React.FC<ResponsiveChatProps> = ({ user }) => {
@@ -144,6 +144,7 @@ const Navbar: React.FC<ResponsiveChatProps> = ({ user }) => {
         {selectedMenu === 'Conversations' && <Chat user={user} />}
         {selectedMenu === 'My Bookings' && <Booking/>}
         {selectedMenu === 'PremiumBooking' && <PremiumBooking/>}
+        
       </div>
     </>
   );
