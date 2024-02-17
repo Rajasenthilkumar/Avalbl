@@ -1,0 +1,48 @@
+.Profile_left{
+ width: auto;
+ height: 150px;
+}
+
+.backProfilePicture{
+  object-fit: cover;
+  height: 186px;
+  width: 100%;
+}
+
+.sidebar-menu {
+  height: 100vh;
+  padding: 16px;
+  background: #f7f8f8;
+  width: 116px;
+  position: fixed;
+  top: 88px;
+}
+.sidebar-menu ul li {
+  width: 84px;
+  height: 68px;
+  border: 1px solid #c3bfd7;
+  border-radius: 10px;
+  text-align: center;
+  margin-bottom: 16px;
+  line-height: 40px;
+}
+
+.sidebar-menu ul li img {
+  margin-top: 10px;
+}
+
+.sidebar-menu ul li a {
+  text-decoration: none;
+}
+.sidebar-menu ul li h4 {
+  font-size: 14px;
+  color: #848094;
+  font-weight: 500;
+  margin-top: -15px;
+}
+.sidebar-menu ul li:hover h4,
+.sidebar-menu ul li:focus h4 {
+  color: var(--green);
+  transition: 0.5s ease-in all;
+}
+

@@ -1,0 +1,84 @@
+.css-1be5mm1-MuiLinearProgress-root-MuiMobileStepper-progress {
+  width: 100% !important;
+  background-color: var(--gray-300, #d0d5dd) !important;
+}
+
+.css-5xe99f-MuiLinearProgress-bar1 {
+  background-color: var(--Primary, #2cb512) !important;
+}
+
+.MuiInputBase-formControl {
+  border-radius: 12px !important;
+}
+
+.stepper span {
+  height: 6px;
+}
+
+.custom-password-input {
+  font-family: 'AsteriskFont', sans-serif; /* Use a custom font that displays asterisks */
+  letter-spacing: 8px; /* Adjust letter spacing to make asterisks wider */
+}
+
+.css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
+  /* border-color: #941b54 !important; */
+  border-color: #fff !important;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.css-md26zr-MuiInputBase-root-MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
+  /* border-color: #941b54 !important; */
+  border-color: #fff !important;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.pro-image img {
+  border-radius: 100% !important;
+  overflow: hidden;
+  width: 100px;
+  height: 100px;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  margin-bottom: 0;
+}
+
+.imageBox {
+  border-radius: 8px;
+  border: 2px dashed var(--gray-300, #d0d5dd);
+  background: var(--White, #fff);
+}
+
+.p-image p {
+  margin-bottom: 0px !important;
+  font-size: 13px !important;
+  line-height: 20px !important;
+}
+
+input.file-upload {
+  display: none;
+}
+input.file-upload2 {
+  display: none;
+}
+input.file-upload3 {
+  display: none;
+}
+
+.location-select {
+  margin-top: 25px !important;
+}
+
+.css-dpjnhs-MuiInputBase-root-MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
+  border-color: #fff !important;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.css-6hp17o-MuiList-root-MuiMenu-list {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+.horizontal-divider {
+  border-top: 2px solid #d0d5dd;
+  width: 100%;
+  margin: 10px 0;
+}

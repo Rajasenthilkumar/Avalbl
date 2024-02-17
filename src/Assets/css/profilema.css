@@ -1,0 +1,141 @@
+/* styles.css */
+
+.acc-banner {
+  background-image: url(../Images/stretched-1920-1080-1331311.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 180px;
+  width: 100%;
+  position: relative;
+  margin-top: 85px;
+}
+
+.acc-header {
+  padding: 15px 0 0px;
+}
+
+.acc-cont {
+  display: flex;
+  align-items: end;
+}
+
+.acc-header .container .row {
+  align-items: end;
+}
+
+.acc-img {
+  height: 182px;
+  width: 182px;
+  border: 4px solid #fff;
+  border-radius: 12px;
+  margin-top: -115px;
+}
+
+.acc-img .img-fluid {
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.acc-name h3 {
+  font-size: 28px;
+  font-weight: 600;
+  color: #101828;
+  margin-right: 20px;
+}
+
+.date.dis-align p {
+  margin-left: 8px !important;
+  font-size: 16px;
+  color: #73787E;
+  font-weight: 400;
+}
+
+.skill-info.dis-align p {
+  margin-left: 16px;
+  margin-bottom: -4px;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.skill-info.dis-align p span {
+  color: #000;
+}
+
+.until-date {
+  position: relative;
+  background-color: #D5EBD1;
+  color: green;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 2px 8px 2px 22px;
+  border-radius: 100px;
+}
+
+.until-date::before {
+  content: "";
+  padding: 3px;
+  border-radius: 5px;
+  position: absolute;
+  left: 10px;
+  top: 11px;
+  background-color: green;
+}
+
+.dis-align {
+  display: flex;
+  align-items: center;
+}
+
+.dis-align p {
+  margin-bottom: 0;
+}
+
+.det-info {
+  margin-left: 24px;
+  margin-bottom: 8px;
+}
+
+.right-btn {
+  text-align: right;
+}
+
+.plan-togle {
+  text-align: right;
+}
+
+.list-btn.plan-btn {
+  margin-bottom: 8px;
+}
+
+.plan-togle .toggle-btn2 {
+  padding: 16px;
+  border-radius: 12px;
+  background-color: #fff;
+  max-width: 367px;
+  margin-left: auto;
+}
+
+.plan-togle .toggle-btn2 span {
+  color: #000;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.plan-togle .toggle-btn2 .switch {
+  margin-left: 16px;
+  margin-right: 0;
+}
+
+.list-btn.plan-btn button:first-child {
+  width: 94px;
+  height: 44px;
+}
+
+.list-btn.plan-btn button:nth-child(2) {
+  min-width: 81px !important;
+  height: 44px;
+  margin-left: 16px;
+}

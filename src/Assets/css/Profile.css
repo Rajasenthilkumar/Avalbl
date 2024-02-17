@@ -1,0 +1,23 @@
+.sidebar {
+  width: '100%'
+  }
+  .sidebar-item {
+    padding: 10px;
+    cursor: pointer;
+    border-bottom: 0.5px solid #D0D5DD;
+    color: #98a2b3;
+  }
+  
+  .sidebar-item:last-child {
+    border-bottom: none; /* Remove border-bottom for the last item */
+  }
+  .menu-item-content {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Adjust the gap as needed */
+  }
+  .active-menu {
+    color: #31b718;
+  }
+
+  

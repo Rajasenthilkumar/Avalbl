@@ -1,0 +1,57 @@
+.accHeader {
+    background-color: #f7f7f7;
+    padding: 50px 0;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+  
+  .accCont {
+    display: flex;
+    align-items: center;
+  }
+  
+  .accImg {
+    margin-right: 30px;
+  }
+  
+  .imgFluid {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .detInfo {
+    flex: 1;
+  }
+  
+  .disAlign {
+    display: flex;
+    align-items: center;
+  }
+  
+  .date {
+    margin-right: 10px;
+  }
+  
+  .actionButton {
+    margin-right: 10px;
+    background-color: #007bff;
+    color: #fff;
+  }
+  
+  .actionButton:hover {
+    background-color: #0056b3;
+  }
+  
+  .btnBorder {
+    border: 1px solid #007bff;
+    color: #007bff;
+  }
+  
+  .btnBorder:hover {
+    background-color: #f7f7f7;
+  }
+  

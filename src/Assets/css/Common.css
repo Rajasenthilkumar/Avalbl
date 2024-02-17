@@ -1,0 +1,60 @@
+:root {
+  --green: #2cb512;
+  --black: #000000;
+  --gray: #667085;
+  --white: #fff;
+  --blue: #211937;
+  --bodycolor: #f5f5fa;
+  /* --fontfamily-1: 'Onest', sans-serif !important; */
+}
+
+.lable-name {
+  font-size: 14px !important;
+  font-style: normal !important;
+  font-weight: 500 !important;
+  line-height: 20px !important;
+  font-family: 'Onest', sans-serif !important;
+}
+
+.formFields input {
+  height: 16px !important;
+  background-color: var(--white);
+  font-family: 'Onest', sans-serif !important;
+}
+
+.common-button-white {
+  align-items: center;
+  text-transform: none !important;
+  border-radius: 12px !important;
+  background-color: var(--white) !important;
+  color: var(--green) !important;
+  width: 100px;
+  height: 45px;
+  border: 1px solid var(--green) !important ;
+  font-family: 'Onest', sans-serif !important;
+}
+
+.common-button-green {
+  align-items: center;
+  text-transform: none !important;
+  border-radius: 12px !important;
+  background-color: var(--white) !important;
+  background: var(--green) !important;
+  width: 160px;
+  height: 45px;
+  font-family: 'Onest', sans-serif !important;
+}
+
+.common-button-orange {
+  background: var(--orange) !important;
+}
+
+.css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
+  border-color: var(--white) !important;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.css-md26zr-MuiInputBase-root-MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
+  border-color: var(--white) !important;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
