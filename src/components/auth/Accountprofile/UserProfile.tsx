@@ -236,43 +236,47 @@ const UserProfile = () => {
                 >
                   <Stack direction="column" spacing={1} sx={{ display: 'inline-flex', marginTop: '1rem' }}>
                     <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-
-                      <Button
-                        className="common-button-green"
-                        type="submit"
-                        variant="contained"
-                        sx={{
-                          marginLeft: 1,
-                          mt: 3,
-                          mb: 2,
-                          '&:hover': {
-                            background: 'var(--Primary, #2CB512)',
-                          },
-                        }}
-                      >
-                        Upgrade Premium
-                      </Button>
-                      <span style={{ marginRight: '10px' }} />
-                      <Button
-                        className="common-button-white"
-                        type="submit"
-                        variant="contained"
-                        onClick={handleEditClick}
-                        sx={{
-                          width: '130px!important',
-                          marginRight: 1,
-                          mt: 3,
-                          mb: 2,
-                          '&:hover': {
-                            color: 'var(--Primary, #2CB512)',
-                            backgroundColor: '#fff',
-                          },
-                        }}
-                      >
-                        Edit Profile
-                      </Button>
-
-                    </div>
+            {!isEditing && (
+              <>
+                <Button
+                  className="common-button-green"
+                  type="submit"
+                  variant="contained"
+                  sx={{
+                    marginLeft: 1,
+                    mt: 3,
+                    mb: 2,
+                    '&:hover': {
+                      background: 'var(--Primary, #2CB512)',
+                    },
+                  }}
+                >
+                  Upgrade Premium
+                </Button>
+                <span style={{ marginRight: '10px' }} />
+              </>
+            )}
+            {!isEditing && (
+              <Button
+                className="common-button-white"
+                type="submit"
+                variant="contained"
+                onClick={handleEditClick}
+                sx={{
+                  width: '130px!important',
+                  marginRight: 1,
+                  mt: 3,
+                  mb: 2,
+                  '&:hover': {
+                    color: 'var(--Primary, #2CB512)',
+                    backgroundColor: '#fff',
+                  },
+                }}
+              >
+                Edit Profile
+              </Button>
+            )}
+          </div>
 
                   </Stack>
                 </Box>
