@@ -1,26 +1,21 @@
 import React, { useState } from 'react';
-import { Avatar, Box, Button, Chip, Divider, Stack, Typography, Switch } from '@mui/material';
-import { Dialog, DialogTitle, DialogContent, DialogActions, } from '@mui/material';
+import { Avatar, Box, Button, Chip, Divider, Stack, Typography,} from '@mui/material';
 import LinearProgress, { linearProgressClasses } from '@mui/material/LinearProgress';
 import { styled } from '@mui/material/styles';
 import List from '@mui/material/List';
 import Grid from '@mui/material/Grid';
 import headerPofile from '../../../Assets/Images/header profile.png';
 import profileheader from '../../../Assets/Images/profile header.png';
-
 import FmdGoodIcon from '@mui/icons-material/FmdGood';
 import BusinessCenterSharpIcon from '@mui/icons-material/BusinessCenterSharp';
 import StaticMap from '../../../Assets/Images/static_map.png';
 import Editprofile from './Editprofile';
 import Carousel from './Carousel/Carousel';
 import Container from '@mui/material/Container';
-
 import '../../../Assets/css/Skills.css';
 //  import Changepassword from './Changepassword';
-// import dummyurl from '../../../Assets/Images/stretched-1920-1080-1331311.png';
-// import profilePic from '../../../Assets/Images/banner-04.png';
 
-// Your provided JSON data
+
 const profileData =
 {
   "status": true,
@@ -176,78 +171,20 @@ const UserProfile = () => {
       backgroundColor: theme.palette.mode === 'light' ? '#1a90ff' : '#308fe8',
     },
   }));
-
   const [isEditing, setIsEditing] = useState(false);
 
   const handleEditClick = () => {
     setIsEditing(!isEditing);
   };
-
-  const handleCancelClick = () => {
-    setIsEditing(false);
-  };
-
-
-  const AntSwitch = styled(Switch)(({ theme }) => ({
-    width: 28,
-    height: 16,
-    padding: 0,
-    display: 'flex',
-    '&:active': {
-      '& .MuiSwitch-thumb': {
-        width: 15,
-      },
-      '& .MuiSwitch-switchBase.Mui-checked': {
-        transform: 'translateX(9px)',
-      },
-    },
-    '& .MuiSwitch-switchBase': {
-      padding: 2,
-      '&.Mui-checked': {
-        transform: 'translateX(12px)',
-        color: '#fff',
-        '& + .MuiSwitch-track': {
-          opacity: 1,
-          backgroundColor: theme.palette.mode === 'dark' ? '#177ddc' : '#2CB512',
-        },
-      },
-    },
-    '& .MuiSwitch-thumb': {
-      boxShadow: '0 2px 4px 0 rgb(0 35 11 / 20%)',
-      width: 12,
-      height: 12,
-      borderRadius: 6,
-      transition: theme.transitions.create(['width'], {
-        duration: 200,
-      }),
-    },
-    '& .MuiSwitch-thumb:hover': {
-      color: 'red',
-    },
-    '& .MuiSwitch-track': {
-      borderRadius: 16 / 2,
-      opacity: 1,
-      backgroundColor: theme.palette.mode === 'dark' ? 'rgba(255,255,255,.35)' : 'rgba(0,0,0,.25)',
-      boxSizing: 'border-box',
-    },
-  }));
-  const [openDialog, setOpenDialog] = useState(false); // State to control the visibility of the dialog
-
-  const handleSwitchToggle = () => {
-    setOpenDialog(true); // Open the dialog when the switch is toggled on
-  };
-
-  const handleDialogClose = () => {
-    setOpenDialog(false); // Close the dialog
-  };
+  // const handleCancelClick = () => {
+  //   setIsEditing(false);
+  // };
 
   return (
     <>
       <div className="Profile" style={{ backgroundColor: '#f7f8f8' }}>
         <div className='Profile_left'>
           <img src={headerPofile} alt="Header" style={{ width: '100%', height: 'auto' }} />
-
-
         </div>
         <Container maxWidth="xl">
           <Stack alignItems="right" pt={2} mt={0} >
@@ -274,7 +211,6 @@ const UserProfile = () => {
                           color: '#2CB512',
                           fontWeight: 500,
                           fontSize: '16px',
-
                         }}
                         label={`• ${profileData.data.availability.label}`}
                       />
@@ -287,11 +223,9 @@ const UserProfile = () => {
                       <span style={{ color: '#667085', fontWeight: 500, fontSize: '16px', }}> Username</span>
                       <span style={{ fontWeight: 500, marginLeft: '8px', fontSize: '16px' }}>{profileData.data.userName}</span>
                     </Typography>
-
                   </Box>
                 </Box>
               </Grid>
-
               <Grid item xs={12} md={6}>
                 <Box
                   sx={{
@@ -302,158 +236,44 @@ const UserProfile = () => {
                 >
                   <Stack direction="column" spacing={1} sx={{ display: 'inline-flex', marginTop: '1rem' }}>
                     <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                      {isEditing ? (
-                        <>
-                          <div>
-                            <Button
-                              className="common-button-white"
-                              type="submit"
-                              variant="contained"
-                              onClick={handleCancelClick}
-                              sx={{
-                                width: '167px',
-                                height: '44px',
-                                marginRight: 1,
-                                mt: 3,
-                                mb: 2,
-                                '&:hover': {
-                                  color: 'var(--Primary, #2CB512)',
-                                  backgroundColor: '#fff',
-                                },
-                              }}
-                            >
-                              Cancel
-                            </Button>
-                            <Button
-                              className="common-button-green"
-                              type="submit"
-                              variant="contained"
-                              sx={{
-                                width: '121px',
-                                height: '44px',
-                                marginLeft: 1,
-                                mt: 3,
-                                mb: 2,
-                                '&:hover': {
-                                  background: 'var(--Primary, #2CB512)',
-                                },
-                              }}
-                            >
-                              Save
-                            </Button>
-                          </div>
-                        </>
-                      ) : (
-                        <>
-                          <Button
-                            className="common-button-green"
-                            type="submit"
-                            variant="contained"
-                            sx={{
-                              marginLeft: 1,
-                              mt: 3,
-                              mb: 2,
-                              '&:hover': {
-                                background: 'var(--Primary, #2CB512)',
-                              },
-                            }}
-                          >
-                            Upgrade Premium
-                          </Button>
-                          <span style={{ marginRight: '10px' }} />
-                          <Button
-                            className="common-button-white"
-                            type="submit"
-                            variant="contained"
-                            onClick={handleEditClick}
-                            sx={{
-                              width: '130px!important',
-                              marginRight: 1,
-                              mt: 3,
-                              mb: 2,
-                              '&:hover': {
-                                color: 'var(--Primary, #2CB512)',
-                                backgroundColor: '#fff',
-                              },
-                            }}
-                          >
-                            Edit Profile
-                          </Button>
-                        </>
 
-                      )}
+                      <Button
+                        className="common-button-green"
+                        type="submit"
+                        variant="contained"
+                        sx={{
+                          marginLeft: 1,
+                          mt: 3,
+                          mb: 2,
+                          '&:hover': {
+                            background: 'var(--Primary, #2CB512)',
+                          },
+                        }}
+                      >
+                        Upgrade Premium
+                      </Button>
+                      <span style={{ marginRight: '10px' }} />
+                      <Button
+                        className="common-button-white"
+                        type="submit"
+                        variant="contained"
+                        onClick={handleEditClick}
+                        sx={{
+                          width: '130px!important',
+                          marginRight: 1,
+                          mt: 3,
+                          mb: 2,
+                          '&:hover': {
+                            color: 'var(--Primary, #2CB512)',
+                            backgroundColor: '#fff',
+                          },
+                        }}
+                      >
+                        Edit Profile
+                      </Button>
+
                     </div>
-                    {/* Typography and AntSwitch components */}
-                    {isEditing && (
-                      <div>
-                        <Grid
-                          container
-                          direction="row"
-                          spacing={1}
-                          alignItems="center"
-                          sx={{ backgroundColor: '#FFFFFF', padding: '15px', borderRadius: '10px' }}
-                        >
-                          <Typography sx={{ color: '#1D2939', fontSize: '16px', fontWeight: 600, marginRight: '5px' }}>
-                            OPT out of being listed on Avalbl
-                          </Typography>
 
-                          <AntSwitch inputProps={{ 'aria-label': 'ant design' }} onChange={handleSwitchToggle} />
-                        </Grid>
-
-
-                        <Dialog
-                          open={openDialog}
-                          onClose={handleDialogClose}
-                          style={{ width: '514px', height: '464px', position: 'absolute', top: '0', left: '0', right: '0', bottom: '0', margin: 'auto' }}
-                          sx={{
-                            display: 'flex',
-                            flexDirection: 'column',
-                            alignItems: 'center',
-                            justifyContent: 'center',
-                            padding: '12px'
-                          }}
-                        >
-                          <DialogTitle sx={{ textAlign: 'center', fontSize: '24px', fontWeight: 600, }}>Are You Sure?</DialogTitle>
-                          <DialogContent sx={{ textAlign: 'center', color: '#73787E', fontSize: '16px', fontWeight: 400 }}>
-                            When this option is enabled, your account will NOT show up in any searches on Avalbl. You will NOT be found and solicited for projects. You will still have full access to all other features as an Avalbl Premium user.
-                          </DialogContent>
-                          <DialogActions sx={{ width: '100%', display: 'flex', justifyContent: 'space-between' }}>
-                            <Button
-                              className="common-button-white"
-                              type="submit"
-                              variant="contained"
-                              // onClick={handleCancelClick}
-
-                              onClick={handleDialogClose}
-                              sx={{
-                                width: '87px',
-                                height: '44px',
-                                '&:hover': {
-                                  color: 'var(--Primary, #2CB512)',
-                                  backgroundColor: '#fff',
-                                },
-                              }}
-                            >
-                              Cancel
-                            </Button>
-                            <Button
-                              className="common-button-green"
-                              type="submit"
-                              variant="contained"
-                              sx={{
-                                width: '132px',
-                                height: '44px',
-                                '&:hover': {
-                                  background: 'var(--Primary, #2CB512)',
-                                },
-                              }}
-                            >
-                              Okay, Got It.
-                            </Button>
-                          </DialogActions>
-                        </Dialog>
-                      </div>
-                    )}
                   </Stack>
                 </Box>
               </Grid>
@@ -467,13 +287,10 @@ const UserProfile = () => {
         </div>
       ) : (
         <>
-
           <div className="carousel" style={{ backgroundColor: '#f7f8f8' }}>
             <Carousel />
             {/* <Changepassword/> */}
-
           </div>
-
           <Box
             sx={{
               display: 'flex',
@@ -484,7 +301,6 @@ const UserProfile = () => {
               flex: '1 0 0',
               alignSelf: 'stretch',
               backgroundColor: '#f7f8f8!important',
-
             }}>
             <Box
               sx={{
@@ -492,9 +308,6 @@ const UserProfile = () => {
                 background: 'var(--White, #FFF)',
                 width: '50%',
                 borderTop: '8px solid #D3FACC',
-
-
-
               }}>
               <Box sx={{ padding: '50px', borderTopRadius: 0 }}>
                 <Typography
@@ -523,8 +336,6 @@ const UserProfile = () => {
                   beautiful animated product . */}
                   {profileData.data.about}
                 </Typography>
-
-
                 <Grid container spacing={2}>
                   <Grid item xs={4}>
                     <div>
@@ -537,7 +348,6 @@ const UserProfile = () => {
                           textAlign: 'left',
                           color: 'var(--green)',
                         }}>
-
                         Availability
                       </Typography>
                       <Typography
@@ -565,7 +375,6 @@ const UserProfile = () => {
                         }}>
                         Rate Range
                       </Typography>
-
                       <Typography
                         style={{
                           margin: '10px 0px 0px 50px',
@@ -578,7 +387,6 @@ const UserProfile = () => {
                       </Typography>
                     </div>
                   </Grid>
-
                 </Grid>
                 <Grid container spacing={2}>
                   <Grid item xs={4}>
@@ -649,10 +457,7 @@ const UserProfile = () => {
                       </Typography>
                     </div>
                   </Grid>
-
                 </Grid>
-
-
                 <Typography
                   style={{
                     margin: '20px 0px 0px 0px',
@@ -705,12 +510,9 @@ const UserProfile = () => {
                       component="nav"
                       aria-labelledby="nested-list-subheader"
                     >
-
                       <Typography style={{ fontSize: '20px', fontWeight: 'bold', color: '#667085', backgroundColor: '#f7f8f8', margin: '10px 15px 10px 15px ', }}>
                         {category.category.label}
                       </Typography>
-
-
                       <Divider />
                       {category.skills.map((skill) => (
                         <Typography key={skill.key} sx={{ padding: '10px 15px 10px 15px ', margin: '10px' }} >
@@ -721,7 +523,6 @@ const UserProfile = () => {
                     </List>
                   ))}
                 </div>
-
                 <Typography
                   style={{
                     margin: '20px 0px 20px 0px',
@@ -732,8 +533,6 @@ const UserProfile = () => {
                   }}>
                   Tools
                 </Typography>
-
-
                 <div className="box-content" style={{ display: 'flex', overflow: 'hidden' }}>
                   {profileData.data.tools.map((category) => (
                     <List
@@ -749,12 +548,9 @@ const UserProfile = () => {
                       component="nav"
                       aria-labelledby="nested-list-subheader"
                     >
-
                       <Typography style={{ fontSize: '20px', fontWeight: 'bold', color: '#667085', backgroundColor: '#f7f8f8', margin: '10px 15px 10px 15px ', }}>
                         {category.category.label}
                       </Typography>
-
-
                       <Divider />
                       {category.tools.map((tools) => (
                         <Typography key={tools.key} sx={{ padding: '10px 15px 10px 15px ', margin: '10px' }} >
@@ -767,15 +563,12 @@ const UserProfile = () => {
                 </div>
               </Box>
             </Box>
-
             <Box
               sx={{
                 borderRadius: '24px',
                 background: 'var(--White, #FFF)',
                 width: '30%',
                 marginLeft: '20px',
-
-
               }}>
               <Typography
                 style={{
@@ -791,8 +584,6 @@ const UserProfile = () => {
                 {profileData.data.language.map((language, index) => (
                   <Typography
                     key={index}
-
-
                     sx={{
                       mt: 2,
                       mb: 2,

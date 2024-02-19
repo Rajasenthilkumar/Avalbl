@@ -394,7 +394,7 @@ const Navbar: React.FC<ResponsiveChatProps> = ({ user }) => {
         {selectedMenu === 'My Bookings' && <Booking />}
         {selectedMenu === 'PremiumBooking' && <PremiumBooking />}
       </div>
-      {/* Merge the search box and profile info */}
+   
       <header className="navbar">
 
         <div id="mySidenav" className={`sidenav ${isNavOpen ? 'open' : ''}`}>
