@@ -1,10 +1,69 @@
 import React from 'react';
-import { Grid, TextField,Typography, Box } from '@mui/material';
+import { Grid, TextField,Typography, Box,Button } from '@mui/material';
 import image1 from '../../../Assets/Images/Gag1.png'
 import uploadCloud from '../../../Assets/Images/uploadCloud.png'
 import profile from '../../../Assets/Images/Image (1).png';
 const TeamProfile = () => {
+    const handleCancelClick = () => {
+        // Handle cancel action
+    };
+
+    const handleSubmitClick = () => {
+        // Handle save action
+    };
+
     return (
+        <>
+          <div style={{ margin: '0px', position: 'relative' }}> 
+        <Grid
+          container
+          sx={{
+            position: 'absolute',
+            top: -140,
+            right: 0,
+            justifyContent: 'flex-end',
+            alignItems: 'flex-start',
+          }}
+        >
+          <Button
+            className="common-button-white"
+            type="submit"
+            variant="contained"
+            onClick={handleCancelClick}
+            sx={{
+              width: '167px',
+              height: '44px',
+              marginRight: 1,
+              '&:hover': {
+                color: 'var(--Primary, #2CB512)',
+                backgroundColor: '#fff',
+              },
+            }}
+          >
+            Cancel
+          </Button>
+          <Button
+            className="common-button-green"
+            type="submit"
+            variant="contained"
+            onClick={handleSubmitClick}
+            sx={{
+              width: '121px',
+              height: '44px',
+              marginLeft: 1,
+              '&:hover': {
+                background: 'var(--Primary, #2CB512)',
+              },
+            }}
+          >
+            Submit
+          </Button>
+        
+        </Grid>
+       
+       
+      </div>
+      
         <Grid container spacing={2}>
             <Grid item xs={12}>
                 <Grid container spacing={2}>
@@ -83,6 +142,7 @@ const TeamProfile = () => {
                 </Grid>
             </Grid>
         </Grid>
+        </>
     );
 };
 

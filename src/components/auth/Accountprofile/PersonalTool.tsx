@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import '../../../Assets/css/Skills.css';
-import { Box, Grid, IconButton } from '@mui/material';
+import { Box, Grid, IconButton,Button } from '@mui/material';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 
@@ -36,9 +36,64 @@ const PersonalTool: React.FC = () => {
       [`${category}-${itemName}`]: !prevCheckedItems[`${category}-${itemName}`],
     }));
   };
+  const handleCancelClick = () => {
+    // Handle cancel action
+};
 
+const handleSubmitClick = () => {
+    // Handle save action
+};
   return (
     <>
+      <div style={{ margin: '0px', position: 'relative' }}> 
+        <Grid
+          container
+          sx={{
+            position: 'absolute',
+            top: -140,
+            right: 0,
+            justifyContent: 'flex-end',
+            alignItems: 'flex-start',
+          }}
+        >
+          <Button
+            className="common-button-white"
+            type="submit"
+            variant="contained"
+            onClick={handleCancelClick}
+            sx={{
+              width: '167px',
+              height: '44px',
+              marginRight: 1,
+              '&:hover': {
+                color: 'var(--Primary, #2CB512)',
+                backgroundColor: '#fff',
+              },
+            }}
+          >
+            Cancel
+          </Button>
+          <Button
+            className="common-button-green"
+            type="submit"
+            variant="contained"
+            onClick={handleSubmitClick}
+            sx={{
+              width: '121px',
+              height: '44px',
+              marginLeft: 1,
+              '&:hover': {
+                background: 'var(--Primary, #2CB512)',
+              },
+            }}
+          >
+            Submit
+          </Button>
+        
+        </Grid>
+       
+       
+      </div>
     <Box sx={{ p: '20px',backgroundColor:'#FFFFFF',borderRadius:'10px' }}>
 
     

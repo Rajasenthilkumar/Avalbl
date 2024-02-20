@@ -1,6 +1,6 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { useState, useEffect } from 'react';
-import { Box, Typography, Grid, TextField, Select, MenuItem, Chip } from '@mui/material';
+import { Box, Typography, Grid, TextField, Select, MenuItem, Chip,Button } from '@mui/material';
 import '../../../Assets/css/Common.css';
 import Env from '../../../services/Env';
 import { connect } from 'react-redux';
@@ -16,19 +16,17 @@ interface RateRangeItem {
 
 const details = {
   "data": {
-    "experienceInYear": 1,
-    "range": {
-        "label": "$25/hr-$50/hr",
-        "key": "25hr50hr"
-    },
-    "bio": "Empty Bio"
-  },
+    "experienceInYear": "5 Year",
+    "rangeKey": "25hr50hr",
+    "bio": "Sample Bio",
+    "companyName": ["ABC", "CDE"]
+}
 };
 
 const PersonalExpression: React.FC<RateExpressionProps> = ({ userAccessToken }) => {
-  const [totExperience, setTotExperience] = useState<number[]>([details.data.experienceInYear]);
+  const [totExperience, setTotExperience] = useState<number>(parseInt(details.data.experienceInYear));
   const [, setRateRange] = useState<RateRangeItem[]>([]);
-  const [rate, setRate] = useState<string>(details.data.range.label);
+  const [rate, setRate] = useState<string>(details.data.rangeKey);
   const [companyInput, setCompanyInput] = useState<string>('');
   const [companies, setCompanies] = useState<string[]>([]);
 
@@ -77,9 +75,65 @@ const PersonalExpression: React.FC<RateExpressionProps> = ({ userAccessToken }) 
       }
     }
   };
+  const handleCancelClick = () => {
+    // Handle cancel action
+};
+
+const handleSubmitClick = () => {
+    // Handle save action
+};
 
   return (
     <>
+      <div style={{ margin: '0px', position: 'relative' }}> 
+        <Grid
+          container
+          sx={{
+            position: 'absolute',
+            top: -140,
+            right: 0,
+            justifyContent: 'flex-end',
+            alignItems: 'flex-start',
+          }}
+        >
+          <Button
+            className="common-button-white"
+            type="submit"
+            variant="contained"
+            onClick={handleCancelClick}
+            sx={{
+              width: '167px',
+              height: '44px',
+              marginRight: 1,
+              '&:hover': {
+                color: 'var(--Primary, #2CB512)',
+                backgroundColor: '#fff',
+              },
+            }}
+          >
+            Cancel
+          </Button>
+          <Button
+            className="common-button-green"
+            type="submit"
+            variant="contained"
+            onClick={handleSubmitClick}
+            sx={{
+              width: '121px',
+              height: '44px',
+              marginLeft: 1,
+              '&:hover': {
+                background: 'var(--Primary, #2CB512)',
+              },
+            }}
+          >
+            Submit
+          </Button>
+        
+        </Grid>
+       
+       
+      </div>
       <Box   sx={{ p: '20px',backgroundColor:'#FFFFFF',borderRadius:'10px' }}>
         <Grid container spacing={2}>
           <Grid item xs={12} sm={6}>
@@ -98,8 +152,8 @@ const PersonalExpression: React.FC<RateExpressionProps> = ({ userAccessToken }) 
               Rate Range
             </Typography>
             <Select sx={{ width: '100%' }} value={rate} onChange={handleRateChange}>
-            <MenuItem value={details.data.range.label}>
-             {details.data.range.label}
+            <MenuItem value={details.data.rangeKey}>
+             {details.data.rangeKey}
            </MenuItem>
           </Select>
           </Grid>
@@ -114,7 +168,7 @@ const PersonalExpression: React.FC<RateExpressionProps> = ({ userAccessToken }) 
               type="text"
               name="companies"
               placeholder="XYZ Company"
-              value={companyInput}
+              value={details.data.companyName}
               onChange={handleInputChange}
               onKeyPress={handleKeyPress}
               required

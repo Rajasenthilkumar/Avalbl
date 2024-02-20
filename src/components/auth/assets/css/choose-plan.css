@@ -1,0 +1,15 @@
+/*========price Section ========*/
+.prices{padding:0px 0;}
+.prices h3{color:var(--green);font-size: 18px;font-weight: 400;margin-bottom:16px;text-align:center;}
+.prices h4{font-size: 66px;font-weight: 500;margin-bottom:24px;color:#1D1E20;line-height: normal;text-align:center;}
+.prices p{font-size: 24px;margin-bottom:42px;color:var(--gray);font-weight: 400;text-align:center;}
+.plan-box {background: #fff;padding: 35px; border-radius: 30px;text-align: center;min-height: 600px;}
+.row.plan {width: 70%;margin: auto;}
+.plan-box .btn.btn-border {height: 56px;width: 100%; margin-bottom: 20px;}
+.plan-box p{margin-bottom: 15px;font-size:16px;}
+.plan-box h4{margin-bottom: 0;font-size: 48px}
+.plan-box h3{margin-bottom: 5px;font-size: 24px}
+.plan-box ul{text-align: left;}
+.plan-box ul li {padding-left: 20px;margin-bottom: 10px;position: relative;}
+.plan-box ul li:before{content: "\f00c";left: 0;font-size: 16px;color:var(--green);font-family:'FontAwesome';left: 0;position: absolute;}
+.top-side{padding:40px 0;}

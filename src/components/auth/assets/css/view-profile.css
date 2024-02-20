@@ -1,0 +1,89 @@
+.acc-banner{background-image: url(../images/banner-img1.png);background-position: center;background-size: cover;background-repeat: no-repeat;height: 184px;width: 100%;position: relative;margin-top: 85px;}
+.gallery-slider{overflow: hidden; padding-bottom: 40px;}
+
+.acc-info{overflow: hidden;padding-bottom: 40px;}
+.acc-box{padding: 38px 24px 20px;background-color: #fff;border-top:8px solid #D3FACC;border-radius:10px;}
+.title-name{font-size: 18px;font-weight: 600;color: var(--green);margin-bottom:14px;}
+.acc-text{font-size: 16px;font-weight: 400;color: #73787E;margin-bottom:28px;}
+.rate-box{display: flex;align-items: center;}
+.aval-title{height: 66px;width: 208px;}
+.rate-rabge-box{margin-left: 65px;}
+.acc-skill{padding-bottom:28px}
+.client-list ul li{font-size: 16px;font-weight: 400;color: #73787E;margin-right:0px;width:calc(25% - 4px); margin-bottom:14px; display: inline-block;}
+.list-box ul li{display: inline-block;width:calc(33% - 7px);margin-right: 14px;}
+.client-list ul li{display: inline-block;width:calc(33% - 77px);}
+.list-box ul li .check-head{ padding: 20px 16px 18px 16px;border-bottom: 1px solid #D0D5DD;}
+.list-box ul li .check-head h4{font-size: 20px;color:#667085;} 
+.list-box ul li .check-box{background-color: #F7F8F8;border-radius: 10px;}
+.list-box ul li .check-box ul{padding: 24px;}
+.list-box ul{display: flex;flex-wrap: wrap;}
+.list-box ul li:last-child{margin-right: 0 !important;}
+.list-box ul li .check-box ul li{color:#667085; font-size: 14px; font-weight: 500;margin-bottom:20px; display: block !important; width:100%}
+.acc-box.right-box{border-top: 0;}
+.lang-list ul li {display: inline-block;text-align: center;padding: 6px 18px;background: #EAECF0;margin-right: 10px;border-radius: 44px;font-size: 16px;color: #344054;font-weight: 400;}
+.map-cont iframe{height: 100px; width: 100%; border-radius: 10px;margin-bottom:12px;}
+.map-cont .date{display: flex; align-items: center;}
+.map-cont .date p{margin-bottom: 0;margin-left:8px;}
+.map-cont .date img{width: 18px;height:18px;}
+.media-cont ul li{display: inline-block;margin-right: 30px; }
+.port-cont.acc-skill p{margin-bottom: 0 !important;}
+.media-cont ul li img{width:30px;height: 30px;}
+
+button.btn.action-button:first-child {width: 167px;}
+.account-header .list-btn{text-align: right;}
+.progress-bar {background: #42a135;height: 10px;border-radius: 20px;}
+.progress{height: 10px;}
+.progress-bar {width:33.33%;border-right: 1px solid #EFF1F3;}
+.progress .progress-bar:first-child{border-top-right-radius: 0 !important; border-bottom-right-radius: 0; border-top-left-radius: 20px; border-bottom-left-radius: 20px;}
+.progress .progress-bar{border-top-left-radius: 0; border-bottom-left-radius: 0;border-left: 1px solid #EFF1F3; }
+.progres-num{display: flex; align-items: center;justify-content: space-around; text-align: center;}
+.progres-num p{ margin-bottom: 0 !important;font-size: 16px; font-weight: 400; color:#73787E;margin-top:5px}
+
+.acc-banner{background-image: url(../images/banner-img1.png); background-position: center;background-size: cover;background-repeat: no-repeat;height: 184px;width: 100%;position: relative;margin-top: 85px; }
+.acc-header{padding: 15px 0 56px;}
+.acc-cont{display:flex ;align-items: end;}
+.acc-header .container .row{align-items: end;}
+.acc-img{height: 182px;width:182px; border:4px solid #fff; border-radius: 12px;margin-top:-115px;}
+.acc-img .img-fluid{width: 100%;height: 100%;border-radius: 12px;object-fit: cover;}
+.acc-name h3{font-size: 28px; font-weight: 600; color:#101828;margin-right: 20px;}
+.date.dis-align p{margin-left: 8px !important; font-size: 16px; color: #73787E;font-weight: 400;}
+.skill-info.dis-align p{margin-left: 16px;margin-bottom:-4px; font-weight: 500;font-size: 16px;}
+.skill-info.dis-align p span{color: #000;}
+.until-date{position: relative; background-color: #D5EBD1; color: var(--green);font-size: 16px; font-weight: 500;padding: 2px 8px 2px 22px;border-radius:100px;}
+.until-date::before{content: "";padding: 3px;border-radius: 5px; position: absolute;left:10px;top:11px;background-color: var(--green);}
+.dis-align{display: flex; align-items: center;}
+.dis-align p{margin-bottom: 0;}
+.det-info{margin-left:24px;margin-bottom: 8px;}
+.right-btn{text-align: right;}
+.acc-header .list-btn button:nth-child(2){margin-left:16px}
+.slick-slide {height: 284px; max-width: 389px; border-radius: 12px !important; margin-right: 30px;}
+.slick-slide div .img-fluid{width: 100%;height: 100%;border-radius: 12px !important;object-fit: cover; }
+.slick-dots{left: 140px;bottom:-25px !important;}
+.slick-list{padding:0 50px 32px !important;}
+.slick-dots li button{margin: auto;}
+.slick-dots li button:before{font-size: 10px;}
+.slick-dots li.slick-active button:before{color: var(--green);}
+.slick-dots li button:hover:before{color: var(--green);}
+.check-box ul li input[type="checkbox"]{ appearance: none;-webkit-appearance: none;height: 15px;width:15px;border-radius: 3px;border:1px solid #8C87A2;background-color: #fff;cursor: pointer;display: flex;align-items: center;justify-content: center;outline: none;}
+.check-box ul li input[type="checkbox"]:after{content:"\f00c";font-family: "fontawesome";font-size: 10px;position: absolute;top:0; color: var(--green);display: none;}
+.check-box ul li input[type="checkbox"]:checked{background-color: #eee;border: 1px solid var(--green);}
+.check-box ul li input[type="checkbox"]:checked:after{display: block;}
+.exclaim{height: 15px;width:15px;border-radius: 4px; border:1px solid #8C87A2;background-color: transparent; margin-left:8px;display: flex; align-items: center;justify-content: center;}
+.exclaim i{color: #8C87A2;font-size: 9px;}
+.green-box .exclaim i{color: var(--green);}
+.green-box .exclaim{border: 1px solid var(--green);}
+.green-box label{color: var(--green);}
+.check-text input{position: relative;}
+.form-alignment2{display: flex;align-items: center;}
+.form-alignment2 .form-group{width: 90%;}
+.form-alignment2 button{margin-left: 18px;margin-top:13px; min-width:120px;width: auto;height: 52px;}
+.bootstrap-tagsinput{display: block;line-height: 40px;color: #000;border-radius:10px;}
+span.tag.label.label-info span {font-size: 15px;padding: 0px 5px;border-radius: 50%;background:  #E0E0E0;border: 1px solid #000;color: #000;margin-left: 8px;}
+span.tag.label.label-info {padding: 6px 14px 6px;background: #E0E0E0;border-radius: 50px; font-size: 16px;color: #424548;border: 1px solid #000;}
+div#tags-output{margin-top:15px;}
+.box-content ul li input[type=checkbox]:checked{accent-color: #F7F8F8;}
+.check-head .drop-icon{color:#000;}  
+
+
+
+

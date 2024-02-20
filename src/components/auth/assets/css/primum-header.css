@@ -1,0 +1,22 @@
+/*======Header============*/
+header{padding: 27px 0;position: absolute;left: 0;right: 0;z-index: 11;background: #fff}
+.login-btn {text-align: right;}
+.login-btn .btn{margin-left: 20px;}
+.search-box .form-group {position: relative;}
+.search-box span {position: absolute;right: 26px;}
+.profile-info ul li{position: relative;}
+.profile-info ul li .dropdown-menu li {padding: 10px; border-bottom: 0; background: transparent;}
+.profile-info ul li .dropdown-menu { margin: 0;padding: 0;left: auto;right: 0; top: 57px; border: 0; width: 215px; border-radius: 12px;background: #fff;}
+.profile-info ul li .dropdown-menu li img{margin-right: 8px}
+.navbar .nav-item .nav-link{font-size:16px;font-weight: 500;color:#73787E;padding:10px 24px;}
+.navbar .navbar-brand { margin-right: 58px;}
+.navbar {padding: 18px 40px;}
+header .bg-light {background-color: #fff!important;}
+.navbar .nav-item:hover .nav-link,.navbar .nav-item:focus .nav-link {background: #D3EDCE;transition: 0.5s ease-in all;border-radius: 12px}
+.navbar .nav-item .nav-link.active-item {
+    background: #D3EDCE;
+    transition: 0.5s ease-in all;
+    border-radius: 12px;
+}
+.sidenav {display: flex;align-items: center;width: 100%;}
+.sidenav .closebtn{display: none;}

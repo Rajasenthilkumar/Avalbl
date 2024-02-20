@@ -222,7 +222,7 @@
 
 
 import React, { useState } from 'react';
-import { Box, Typography, Grid, TextField, Autocomplete, InputAdornment } from '@mui/material';
+import { Box, Typography, Grid, TextField, Autocomplete, InputAdornment,Button } from '@mui/material';
 import mapPin from '../../../Assets/Images/mapPin.png';
 import '../../../Assets/css/Common.css';
 import CustomSnackbar from '../../../common/Snackbar';
@@ -350,8 +350,64 @@ const Personallocation: React.FC<LocationProps> = ({ userAccessToken }) => {
         });
     }
   };
+  const handleCancelClick = () => {
+    // Handle cancel action
+};
 
+const handleSubmitClick = () => {
+    // Handle save action
+};
   return (
+    <>
+     <div style={{ margin: '0px', position: 'relative' }}> 
+        <Grid
+          container
+          sx={{
+            position: 'absolute',
+            top: -140,
+            right: 0,
+            justifyContent: 'flex-end',
+            alignItems: 'flex-start',
+          }}
+        >
+          <Button
+            className="common-button-white"
+            type="submit"
+            variant="contained"
+            onClick={handleCancelClick}
+            sx={{
+              width: '167px',
+              height: '44px',
+              marginRight: 1,
+              '&:hover': {
+                color: 'var(--Primary, #2CB512)',
+                backgroundColor: '#fff',
+              },
+            }}
+          >
+            Cancel
+          </Button>
+          <Button
+            className="common-button-green"
+            type="submit"
+            variant="contained"
+            onClick={handleSubmitClick}
+            sx={{
+              width: '121px',
+              height: '44px',
+              marginLeft: 1,
+              '&:hover': {
+                background: 'var(--Primary, #2CB512)',
+              },
+            }}
+          >
+            Submit
+          </Button>
+        
+        </Grid>
+       
+       
+      </div>
     <Box sx={{ p: '20px',backgroundColor:'#FFFFFF',borderRadius:'10px' }}>
       <Typography
         className="lable-name"
@@ -431,6 +487,7 @@ const Personallocation: React.FC<LocationProps> = ({ userAccessToken }) => {
 
       <CustomSnackbar open={open} autoHideDuration={3000} onClose={handleClose} toast={toast} />
     </Box>
+    </>
   );
 };
 

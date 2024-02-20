@@ -158,7 +158,6 @@ import Grid from '@mui/material/Grid';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import { styled } from '@mui/material/styles';
-import Opt from './Opt'
 import LinearProgress, { linearProgressClasses } from '@mui/material/LinearProgress';
 
 const BorderLinearProgress = styled(LinearProgress)(({ theme }) => ({
@@ -190,7 +189,7 @@ export default function PlanBillinginfo() {
           container
           sx={{
             position: 'absolute',
-            top: -160,
+            top: -140,
             right: 0,
             justifyContent: 'flex-end',
             alignItems: 'flex-start',
@@ -231,19 +230,7 @@ export default function PlanBillinginfo() {
           </Button>
         
         </Grid>
-        <Grid
-          container
-          sx={{
-            position: 'absolute',
-            top: -100,
-            right: 0,
-            justifyContent: 'flex-end',
-            alignItems: 'flex-start',
-          }}
-        >
-          
-          <Opt/>
-        </Grid>
+       
        
       </div>
         <Box sx={{ flexGrow: 1 }}>

@@ -1,0 +1,106 @@
+.acc-banner {
+    background-image: url(../../../Assets/Images/stretched-1920-1080-1331311.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 184px;
+    width: 100%;
+    position: relative;
+    margin-top: 85px;
+  }
+  
+  .acc-header {
+    padding: 15px 0 56px;
+  }
+  
+  .acc-cont {
+    display: flex;
+    align-items: end;
+  }
+  
+  .acc-header .container .row {
+    align-items: end;
+  }
+  
+  .acc-img {
+    height: 182px;
+    width: 182px;
+    border: 4px solid #fff;
+    border-radius: 12px;
+    margin-top: -115px;
+  }
+  
+  .acc-img .img-fluid {
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    object-fit: cover;
+  }
+  
+  .acc-name h3 {
+    font-size: 28px;
+    font-weight: 600;
+    color: #101828;
+    margin-right: 20px;
+  }
+  
+  .date.dis-align p {
+    margin-left: 8px !important;
+    font-size: 16px;
+    color: #73787E;
+    font-weight: 400;
+  }
+  
+  .skill-info.dis-align p {
+    margin-left: 16px;
+    margin-bottom: -4px;
+    font-weight: 500;
+    font-size: 16px;
+  }
+  
+  .skill-info.dis-align p span {
+    color: #000;
+  }
+  
+  .until-date {
+    position: relative;
+    background-color: #D5EBD1;
+    color: var(--green);
+    font-size: 16px;
+    font-weight: 500;
+    padding: 2px 8px 2px 22px;
+    border-radius: 100px;
+  }
+  
+  .until-date::before {
+    content: "";
+    padding: 3px;
+    border-radius: 5px;
+    position: absolute;
+    left: 10px;
+    top: 11px;
+    background-color: var(--green);
+  }
+  
+  .dis-align {
+    display: flex;
+    align-items: center;
+  }
+  
+  .dis-align p {
+    margin-bottom: 0;
+  }
+  
+  .det-info {
+    margin-left: 24px;
+    margin-bottom: 8px;
+  }
+  
+  .right-btn {
+    text-align: right;
+  }
+  
+  .acc-header .list-btn button:nth-child(2) {
+    margin-left: 16px;
+  }
+  

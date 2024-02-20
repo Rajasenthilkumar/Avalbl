@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Box, Typography, Grid, TextField, InputAdornment } from '@mui/material';
+import { Box, Typography, Grid, TextField, InputAdornment,Button } from '@mui/material';
 import '../../../Assets/css/Common.css';
 import uploadCloud from '../../../Assets/Images/uploadCloud.png';
 import facebook from '../../../Assets/Images/facebook.png';
@@ -49,9 +49,65 @@ const PersonalPortfolios: React.FC<PortfoliosSocialProps> = ({ userAccessToken }
     console.log(`Link for ${key}: ${value}`);
     // Additional logic can be added here if needed
   };
+  const handleCancelClick = () => {
+    // Handle cancel action
+};
 
+const handleSubmitClick = () => {
+    // Handle save action
+};
   return (
     <>
+     <div style={{ margin: '0px', position: 'relative' }}> 
+        <Grid
+          container
+          sx={{
+            position: 'absolute',
+            top: -140,
+            right: 0,
+            justifyContent: 'flex-end',
+            alignItems: 'flex-start',
+          }}
+        >
+          <Button
+            className="common-button-white"
+            type="submit"
+            variant="contained"
+            onClick={handleCancelClick}
+            sx={{
+              width: '167px',
+              height: '44px',
+              marginRight: 1,
+              '&:hover': {
+                color: 'var(--Primary, #2CB512)',
+                backgroundColor: '#fff',
+              },
+            }}
+          >
+            Cancel
+          </Button>
+          <Button
+            className="common-button-green"
+            type="submit"
+            variant="contained"
+            onClick={handleSubmitClick}
+            sx={{
+              width: '121px',
+              height: '44px',
+              marginLeft: 1,
+              '&:hover': {
+                background: 'var(--Primary, #2CB512)',
+              },
+            }}
+          >
+            Submit
+          </Button>
+        
+        </Grid>
+       
+       
+      </div>
+   
     <Box sx={{ p: '20px',backgroundColor:'#FFFFFF',borderRadius:'10px' }}>
       <Grid container spacing={2}>
         <Grid item xs={12}>

@@ -1,0 +1,68 @@
+/*=======admin- dash css======*/
+.admin-dash{display: flex;position: relative;}
+.admin-left{position: fixed;top:0;left:0;z-index: 999;background-color: #fff;border: 1px solid #fff;width:260px;height: 100vh;}
+.admin-right{margin-left: 260px;padding: 32px; background-color: #F7F8F8;width: 100%;height: 100vh;}
+.admin-logo .img-fluid{width: 170px;height: 40px;}
+.admin-logo {padding: 24px 43px 53px;}
+.dash-menu ul li{padding: 0px 22px; position: relative;margin-bottom: 8px;}
+.dash-menu ul li::before{ content: "";height: 36px;width: 0px;background-color: var(--green);border-radius:10px;position: absolute;left:0;top:50%;transform: translateY(-50%);transition: all .3s;}
+.dash-menu ul li:hover:before{width:4px;}
+.dash-menu ul li:focus:before{width:4px;}
+.dash-menu ul li.active:before{width:4px;}
+.dash-menu ul li a{color:#475467 ;font-size: 16px;font-weight: 500;padding: 16px 20px;border-radius: 50px;width: 100%;display: block;}
+.dash-menu ul li a img{margin-right: 8px;height: 24px;width: 24px;}
+.dash-menu ul li.active-link a{background-color: #475467;color: #fff;}
+.dash-menu ul li a:hover{background-color: #475467;color: #fff;}
+.dash-menu ul li.active-link img{filter:brightness(0) invert(1);}
+.dash-menu ul li a:hover img{filter:brightness(0) invert(1);}
+.dash-menu ul li a:focus img{filter:brightness(0) invert(1);}
+.dash-menu ul li a img{filter: invert(0.1) brightness(0.4);}
+.admin-dash.left-side .admin-left{left:-260px;}
+.admin-dash.left-side .admin-right{margin-left: 0px;}
+
+/*====admin-right =====*/
+
+.srch-form{width:45%; display: flex; align-items: center;}
+.srch-form .form-group{position: relative;margin-bottom: 0; width: 100%;}
+span.arrow-btn{margin-right: 10px;}
+span.arrow-btn i{color:var(--green);font-size: 20px;}
+.srch-form input{border: 1px solid #fff !important;border-radius: 40px !important;padding-left: 45px !important; font-size: 14px; color: #646972; font-weight: 500;}
+.srch-form .fa-search{position: absolute; left: 20px; top:18px; color: #000; font-size: 16px; z-index: 99;}
+.admin-pro {display: flex;align-items: center;background-color: #fff; border-radius: 8px;height: 56px;width:118px; padding: 12px;}
+.admin-pro span{margin-left:8px; font-size: 18px; font-weight: 500; color:#475467;}
+.admin-pro img{height: 32px;width: 32px;border-radius: 50%;}
+.admin-head {display: flex;align-items: center;justify-content: space-between;margin-bottom: 32px;}
+
+/*====users box===*/
+.table-srch{display: flex; align-items:center ;}
+.srch-input{width:100%}
+.invite-btn{text-align: right;margin-left:16px;}
+.users-content{padding: 30px;border-radius: 16px;background-color: #fff;}
+.users-content form{margin-bottom: 20px;}
+.srch-input{position: relative;}
+.srch-input input{border: 1px solid #F2F2F2 !important; padding: 13px 16px;font-size: 16px; color:#646972;font-weight: 400;}
+.srch-input span{position: absolute;right: 17px;font-size: 18px; color:#646972;top:50%;transform: translateY(-50%);}
+.invite-btn button{height: 48px;line-height: normal;}
+
+/*=====data table users=======*/
+.icon-modal{display: flex;align-items: center;}
+.icon-modal .modal-img:first-child{margin-left:0;}
+.modal-img{margin-left: 8px; padding:8px;height: 36px;width: 36px;border-radius: 50px;border:1px solid #CCCCCC;text-align: center;display: flex;align-items: center;justify-content: center;}
+.modal-img img{height: 20px;width:20px;}
+.d-table{display: unset !important;}
+.d-table table{border-color:#F2F2F2 !important;}
+.d-table table thead tr th{text-align: center; font-size: 14px; color:#4D4D4D;font-weight: 500;}
+.d-table table tbody tr td{text-align: center; font-size: 14px; color:#4D4D4D;font-weight: 500;}
+
+/*===invite modal=====*/
+.user-modal .modal-dialog{max-width:903px;}
+.user-modal .modal-content{padding: 32px 28px;background-color: #fff;border-radius: 10px;}
+.user-btns{justify-content: center;}
+.user-btns button:first-child{margin-left: 0;}
+.user-btns button{min-width: 333px;height: 44px;margin-left: 16px;}
+.user-modal .modal-header{padding: 0;border: 0;}
+.user-modal .modal-body{padding: 0;margin-bottom: 16px;}
+.user-modal .modal-footer{border-top: 0;padding: 0;}
+.user-modal .modal-footer button:nth-child(2){margin-left: 16px;}
+.modal-head{font-size: 18px;color:#2CB512;font-weight: 600;margin-bottom: 11px;}
+.modal-text{font-size:14px;color: #73787E; font-weight: 400;}

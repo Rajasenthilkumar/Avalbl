@@ -1,0 +1,39 @@
+.sidebar-wrapper{display: flex;position: relative;}
+.left-side{position: fixed;left: 0;top:88px;height: 100vh;width:300px;background-color: #F7F8F8;z-index: 1;border-right: 1px solid #C3BFD7;padding:34px 16px;}
+.right-side{background-color: #F7F8F8;padding: 34px 24px;overflow: hidden;margin-left: 300px;position: relative;width: 100%;margin-top: 88px;} 
+.left-side ul li {width:100%;margin-bottom:12px;}
+.left-side ul li a{padding: 12px 16px 12px 16px;width: 100%;color: #424866 !important;display: block;font-size: 16px;}
+.left-side ul li a.active{background-color: #fff !important;border-radius: 12px;color: #000 !important;font-weight: 600;}
+.left-side ul li a:hover{background-color: #fff !important;border-radius: 12px;color: #000 !important;font-weight: 600;}
+.list-img {height: 100px;width: 100px;border-radius: 12px;}
+.pro-img .img-fluid{width:40px;height: 40px;object-fit: cover;border-radius: 100%;}
+.list-text{padding-left: 24px;}
+.booking-list ul li {display: block;padding: 16px;background: #fff;border-radius: 20px;margin-bottom:16px;}
+.list-btn{text-align: right;}
+.list-btn.book-btn button{min-width:96px; width:96px !important;}
+.list-btn button{margin-left: 18px;}
+.date p{color: #848094; margin-bottom: 0;padding-left: 8px;}
+.date{display: flex; align-items: center;}
+.list-text h4{font-size: 20px; color: #000;line-height: normal;margin-bottom: 4px;}
+.list-text h6{font-size: 16px; color: #9995AE;line-height: normal;margin-bottom: 6px;}
+.list-text h6 span{color: var(--green);}
+.list-content{display: flex;}
+.list-img .img-fluid{width:100%;height: 100%; object-fit: cover; border-radius: 12px;}
+.disc-text p {font-size: 16px; color: #9995AE;line-height: normal;margin-top:8px; margin-bottom: 0;font-weight: 500;}
+.disc-text p span{color: #000;}
+.pro-info{padding-left: 10px;}
+.pro-info h4{font-size: 16px; color: #424866; font-weight: 600;}
+.pro-info p{font-size: 14px; color: #000; margin-bottom: 0; }
+.chat-prof{display: flex !important; align-items: center !important;justify-content: space-between !important;}
+.notifi-time{text-align: center;}
+.notifi-time p {width: 20px;height: 20px;padding: 2px;background-color: var(--green);color: #fff;border-radius: 50%;font-size: 11px;line-height: 1.5;text-align: center;margin-bottom: 0;margin: auto;}
+.pro-cont{display: flex; align-items: center;}
+.notifi-time h6{font-size: 12px; color: #404040;margin-top: 3px; margin-bottom: 0;}
+.chat-title p{color: #000;font-size: 16px;font-weight: 600;margin-bottom: 15px;}
+.id-list{height: 100%;overflow: hidden;overflow-y: scroll;}
+.id-list::-webkit-scrollbar{width: 0;}
+.chat-box{height:100%;background-color: #fff;border-radius: 12px; overflow: hidden;}
+.chat-id{padding: 15px 20px;}
+.chat-text{height: 100%;padding: 15px 20px; overflow: hidden;overflow-y: scroll;border-top: 1px solid #C3BFD7; border-bottom: 1px solid #C3BFD7;}
+.chat-text::-webkit-scrollbar{width: 0;} 
+

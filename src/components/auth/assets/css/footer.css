@@ -1,0 +1,16 @@
+/*======= Footer section ==========*/
+footer{position: relative;padding: 56px 0}
+footer:before{content: "";position: absolute;top:0;bottom:0;text-align: center;width:1px;background: #A5B0C6;left: 0;right: 0;margin:auto;}
+.footer-info img{margin-bottom: 32px}
+.footer-info h3{font-size: 40px;color:#343434;font-weight: 600;margin-bottom:16px;}
+.footer-info p{font-size: 16px;color:var(--gray);margin-bottom: 32px;font-weight: 400}
+.footer-info input{height: 52px;border:1px solid #C4BFCF;border-radius: 12px}
+.footer-info .form-group{margin-bottom: 24px}
+.footer-info {padding-right: 170px;}
+.footer-wrapper{padding-left: 170px}
+.footer-wrapper h4{font-size: 18px;color:#000;margin-bottom:24px;font-weight: 600}
+.footer-wrapper ul li a{color:var(--gray);font-size: 16px;margin-bottom: 16px;font-weight: 500;text-transform: uppercase;display: block;}
+.footer-wrapper ul li a:hover,.footer-wrapper ul li a:focus{color:var(--green);transition:0.5s ease-in all;}
+.copy-right{padding:33px 0;text-align: center;border-top: 1px solid #A5B0C6;}
+.copy-right h4{font-size: 14px;color:var(--gray);}
+.copy-right h4 a:hover,.copy-right h4 a:focus{color:#000;transition:0.5s ease-in all;}

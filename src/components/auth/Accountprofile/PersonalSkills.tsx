@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import '../../../Assets/css/Skills.css';
 import { Collapse } from 'react-bootstrap';
-import { Box, IconButton, Grid } from '@mui/material';
+import { Box, IconButton, Grid ,Button} from '@mui/material';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 import Info from '../../../Assets/Images/Info.png';
@@ -52,427 +52,7 @@ const SkillsDetails: React.FC = () => {
   const [isOpen, setIsOpen] = useState<{ [key: string]: boolean }>({});
   const [checkedItems, setCheckedItems] = useState<CheckedItems>({});
 
-  // const apiResponse = [
-  //   {
-  //     id: 1,
-  //     name: 'Creative Direction',
-  //     key: 'creativeDirection',
-  //     categoryId: 1,
-  //     information: null,
-  //     isActive: true,
-  //     createdAt: '2024-01-02T11:35:09.953Z',
-  //     updatedAt: '2024-01-02T11:35:09.953Z',
-  //     skillCategory: {
-  //       id: 1,
-  //       name: 'Director Level',
-  //       key: 'directorLevel',
-  //       isActive: true,
-  //       createdAt: '2024-01-02T11:35:09.937Z',
-  //       updatedAt: '2024-01-02T11:35:09.937Z',
-  //     },
-  //   },
-  //   {
-  //     id: 2,
-  //     name: 'Art Direction',
-  //     key: 'artDirection',
-  //     categoryId: 1,
-  //     information: null,
-  //     isActive: true,
-  //     createdAt: '2024-01-02T11:35:09.953Z',
-  //     updatedAt: '2024-01-02T11:35:09.953Z',
-  //     skillCategory: {
-  //       id: 1,
-  //       name: 'Director Level',
-  //       key: 'directorLevel',
-  //       isActive: true,
-  //       createdAt: '2024-01-02T11:35:09.937Z',
-  //       updatedAt: '2024-01-02T11:35:09.937Z',
-  //     },
-  //   },
-  //   {
-  //     id: 3,
-  //     name: 'Animation Direction',
-  //     key: 'animationDirection',
-  //     categoryId: 1,
-  //     information: null,
-  //     isActive: true,
-  //     createdAt: '2024-01-02T11:35:09.953Z',
-  //     updatedAt: '2024-01-02T11:35:09.953Z',
-  //     skillCategory: {
-  //       id: 1,
-  //       name: 'Director Level',
-  //       key: 'directorLevel',
-  //       isActive: true,
-  //       createdAt: '2024-01-02T11:35:09.937Z',
-  //       updatedAt: '2024-01-02T11:35:09.937Z',
-  //     },
-  //   },
-  //   {
-  //     id: 4,
-  //     name: 'Matte Painting',
-  //     key: 'mattePainting',
-  //     categoryId: 2,
-  //     information: null,
-  //     isActive: true,
-  //     createdAt: '2024-01-02T11:35:09.953Z',
-  //     updatedAt: '2024-01-02T11:35:09.953Z',
-  //     skillCategory: {
-  //       id: 2,
-  //       name: 'Concept Artist',
-  //       key: 'conceptArtist',
-  //       isActive: true,
-  //       createdAt: '2024-01-02T11:35:09.937Z',
-  //       updatedAt: '2024-01-02T11:35:09.937Z',
-  //     },
-  //   },
-  //   {
-  //     id: 5,
-  //     name: 'Concept Art',
-  //     key: 'conceptArt',
-  //     categoryId: 2,
-  //     information: null,
-  //     isActive: true,
-  //     createdAt: '2024-01-02T11:35:09.953Z',
-  //     updatedAt: '2024-01-02T11:35:09.953Z',
-  //     skillCategory: {
-  //       id: 2,
-  //       name: 'Concept Artist',
-  //       key: 'conceptArtist',
-  //       isActive: true,
-  //       createdAt: '2024-01-02T11:35:09.937Z',
-  //       updatedAt: '2024-01-02T11:35:09.937Z',
-  //     },
-  //   },
-  //   {
-  //     id: 6,
-  //     name: 'Storyboard',
-  //     key: 'storyboard',
-  //     categoryId: 2,
-  //     information: null,
-  //     isActive: true,
-  //     createdAt: '2024-01-02T11:35:09.953Z',
-  //     updatedAt: '2024-01-02T11:35:09.953Z',
-  //     skillCategory: {
-  //       id: 2,
-  //       name: 'Concept Artist',
-  //       key: 'conceptArtist',
-  //       isActive: true,
-  //       createdAt: '2024-01-02T11:35:09.937Z',
-  //       updatedAt: '2024-01-02T11:35:09.937Z',
-  //     },
-  //   },
-  //   {
-  //     id: 7,
-  //     name: 'AR/VR',
-  //     key: 'arvr',
-  //     categoryId: 3,
-  //     information: null,
-  //     isActive: true,
-  //     createdAt: '2024-01-02T11:35:09.953Z',
-  //     updatedAt: '2024-01-02T11:35:09.953Z',
-  //     skillCategory: {
-  //       id: 3,
-  //       name: 'Experience Designer',
-  //       key: 'experienceDesigner',
-  //       isActive: true,
-  //       createdAt: '2024-01-02T11:35:09.937Z',
-  //       updatedAt: '2024-01-02T11:35:09.937Z',
-  //     },
-  //   },
-  //   {
-  //     id: 8,
-  //     name: 'Wayfaring',
-  //     key: 'wayfaring',
-  //     categoryId: 3,
-  //     information: null,
-  //     isActive: true,
-  //     createdAt: '2024-01-02T11:35:09.953Z',
-  //     updatedAt: '2024-01-02T11:35:09.953Z',
-  //     skillCategory: {
-  //       id: 3,
-  //       name: 'Experience Designer',
-  //       key: 'experienceDesigner',
-  //       isActive: true,
-  //       createdAt: '2024-01-02T11:35:09.937Z',
-  //       updatedAt: '2024-01-02T11:35:09.937Z',
-  //     },
-  //   },
-  //   {
-  //     id: 9,
-  //     name: 'Concert Visuals',
-  //     key: 'concertVisuals',
-  //     categoryId: 3,
-  //     information: null,
-  //     isActive: true,
-  //     createdAt: '2024-01-02T11:35:09.953Z',
-  //     updatedAt: '2024-01-02T11:35:09.953Z',
-  //     skillCategory: {
-  //       id: 3,
-  //       name: 'Experience Designer',
-  //       key: 'experienceDesigner',
-  //       isActive: true,
-  //       createdAt: '2024-01-02T11:35:09.937Z',
-  //       updatedAt: '2024-01-02T11:35:09.937Z',
-  //     },
-  //   },
-  //   {
-  //     id: 10,
-  //     name: 'Logo Design',
-  //     key: 'logoDesign',
-  //     categoryId: 4,
-  //     information: null,
-  //     isActive: true,
-  //     createdAt: '2024-01-02T11:35:09.953Z',
-  //     updatedAt: '2024-01-02T11:35:09.953Z',
-  //     skillCategory: {
-  //       id: 4,
-  //       name: 'Designer',
-  //       key: 'designer',
-  //       isActive: true,
-  //       createdAt: '2024-01-02T11:35:09.937Z',
-  //       updatedAt: '2024-01-02T11:35:09.937Z',
-  //     },
-  //   },
-  //   {
-  //     id: 11,
-  //     name: 'Brand Design',
-  //     key: 'brandDesign',
-  //     categoryId: 4,
-  //     information: null,
-  //     isActive: true,
-  //     createdAt: '2024-01-02T11:35:09.953Z',
-  //     updatedAt: '2024-01-02T11:35:09.953Z',
-  //     skillCategory: {
-  //       id: 4,
-  //       name: 'Designer',
-  //       key: 'designer',
-  //       isActive: true,
-  //       createdAt: '2024-01-02T11:35:09.937Z',
-  //       updatedAt: '2024-01-02T11:35:09.937Z',
-  //     },
-  //   },
-  //   {
-  //     id: 12,
-  //     name: 'Key Art',
-  //     key: 'keyArt',
-  //     categoryId: 4,
-  //     information: null,
-  //     isActive: true,
-  //     createdAt: '2024-01-02T11:35:09.953Z',
-  //     updatedAt: '2024-01-02T11:35:09.953Z',
-  //     skillCategory: {
-  //       id: 4,
-  //       name: 'Designer',
-  //       key: 'designer',
-  //       isActive: true,
-  //       createdAt: '2024-01-02T11:35:09.937Z',
-  //       updatedAt: '2024-01-02T11:35:09.937Z',
-  //     },
-  //   },
-  //   {
-  //     id: 13,
-  //     name: 'Product Design',
-  //     key: 'productDesign',
-  //     categoryId: 4,
-  //     information: null,
-  //     isActive: true,
-  //     createdAt: '2024-01-02T11:35:09.953Z',
-  //     updatedAt: '2024-01-02T11:35:09.953Z',
-  //     skillCategory: {
-  //       id: 4,
-  //       name: 'Designer',
-  //       key: 'designer',
-  //       isActive: true,
-  //       createdAt: '2024-01-02T11:35:09.937Z',
-  //       updatedAt: '2024-01-02T11:35:09.937Z',
-  //     },
-  //   },
-  //   {
-  //     id: 14,
-  //     name: 'Web Design',
-  //     key: 'webDesign',
-  //     categoryId: 4,
-  //     information: null,
-  //     isActive: true,
-  //     createdAt: '2024-01-02T11:35:09.953Z',
-  //     updatedAt: '2024-01-02T11:35:09.953Z',
-  //     skillCategory: {
-  //       id: 4,
-  //       name: 'Designer',
-  //       key: 'designer',
-  //       isActive: true,
-  //       createdAt: '2024-01-02T11:35:09.937Z',
-  //       updatedAt: '2024-01-02T11:35:09.937Z',
-  //     },
-  //   },
-  //   {
-  //     id: 15,
-  //     name: 'Editorial Illustration',
-  //     key: 'editorialIllustration',
-  //     categoryId: 5,
-  //     information: null,
-  //     isActive: true,
-  //     createdAt: '2024-01-02T11:35:09.953Z',
-  //     updatedAt: '2024-01-02T11:35:09.953Z',
-  //     skillCategory: {
-  //       id: 5,
-  //       name: 'Illustrator',
-  //       key: 'illustrator',
-  //       isActive: true,
-  //       createdAt: '2024-01-02T11:35:09.937Z',
-  //       updatedAt: '2024-01-02T11:35:09.937Z',
-  //     },
-  //   },
-  //   {
-  //     id: 16,
-  //     name: 'Character Design',
-  //     key: 'characterDesign',
-  //     categoryId: 5,
-  //     information: null,
-  //     isActive: true,
-  //     createdAt: '2024-01-02T11:35:09.953Z',
-  //     updatedAt: '2024-01-02T11:35:09.953Z',
-  //     skillCategory: {
-  //       id: 5,
-  //       name: 'Illustrator',
-  //       key: 'illustrator',
-  //       isActive: true,
-  //       createdAt: '2024-01-02T11:35:09.937Z',
-  //       updatedAt: '2024-01-02T11:35:09.937Z',
-  //     },
-  //   },
-  //   {
-  //     id: 17,
-  //     name: 'Environment Design',
-  //     key: 'environmentDesign',
-  //     categoryId: 5,
-  //     information: null,
-  //     isActive: true,
-  //     createdAt: '2024-01-02T11:35:09.953Z',
-  //     updatedAt: '2024-01-02T11:35:09.953Z',
-  //     skillCategory: {
-  //       id: 5,
-  //       name: 'Illustrator',
-  //       key: 'illustrator',
-  //       isActive: true,
-  //       createdAt: '2024-01-02T11:35:09.937Z',
-  //       updatedAt: '2024-01-02T11:35:09.937Z',
-  //     },
-  //   },
-  //   {
-  //     id: 18,
-  //     name: 'Sound Design',
-  //     key: 'soundDesign',
-  //     categoryId: 6,
-  //     information: null,
-  //     isActive: true,
-  //     createdAt: '2024-01-02T11:35:09.953Z',
-  //     updatedAt: '2024-01-02T11:35:09.953Z',
-  //     skillCategory: {
-  //       id: 6,
-  //       name: 'Sound & Music',
-  //       key: 'soundMusic',
-  //       isActive: true,
-  //       createdAt: '2024-01-02T11:35:09.937Z',
-  //       updatedAt: '2024-01-02T11:35:09.937Z',
-  //     },
-  //   },
-  //   {
-  //     id: 19,
-  //     name: 'Composing',
-  //     key: 'composing',
-  //     categoryId: 6,
-  //     information: null,
-  //     isActive: true,
-  //     createdAt: '2024-01-02T11:35:09.953Z',
-  //     updatedAt: '2024-01-02T11:35:09.953Z',
-  //     skillCategory: {
-  //       id: 6,
-  //       name: 'Sound & Music',
-  //       key: 'soundMusic',
-  //       isActive: true,
-  //       createdAt: '2024-01-02T11:35:09.937Z',
-  //       updatedAt: '2024-01-02T11:35:09.937Z',
-  //     },
-  //   },
-  //   {
-  //     id: 20,
-  //     name: 'Music Editing',
-  //     key: 'musicEditing',
-  //     categoryId: 6,
-  //     information: null,
-  //     isActive: true,
-  //     createdAt: '2024-01-02T11:35:09.953Z',
-  //     updatedAt: '2024-01-02T11:35:09.953Z',
-  //     skillCategory: {
-  //       id: 6,
-  //       name: 'Sound & Music',
-  //       key: 'soundMusic',
-  //       isActive: true,
-  //       createdAt: '2024-01-02T11:35:09.937Z',
-  //       updatedAt: '2024-01-02T11:35:09.937Z',
-  //     },
-  //   },
-  //   {
-  //     id: 21,
-  //     name: 'Mixing',
-  //     key: 'mixing',
-  //     categoryId: 6,
-  //     information: null,
-  //     isActive: true,
-  //     createdAt: '2024-01-02T11:35:09.953Z',
-  //     updatedAt: '2024-01-02T11:35:09.953Z',
-  //     skillCategory: {
-  //       id: 6,
-  //       name: 'Sound & Music',
-  //       key: 'soundMusic',
-  //       isActive: true,
-  //       createdAt: '2024-01-02T11:35:09.937Z',
-  //       updatedAt: '2024-01-02T11:35:09.937Z',
-  //     },
-  //   },
-  //   {
-  //     id: 22,
-  //     name: 'VFX Compositing',
-  //     key: 'vfxCompositing',
-  //     categoryId: 8,
-  //     information: null,
-  //     isActive: true,
-  //     createdAt: '2024-01-02T11:35:09.953Z',
-  //     updatedAt: '2024-01-02T11:35:09.953Z',
-  //     skillCategory: {
-  //       id: 8,
-  //       name: 'Compositor/VFX',
-  //       key: 'compositorvfx',
-  //       isActive: true,
-  //       createdAt: '2024-01-02T11:35:09.937Z',
-  //       updatedAt: '2024-01-02T11:35:09.937Z',
-  //     },
-  //   },
-  //   {
-  //     id: 23,
-  //     name: 'CG Compositing',
-  //     key: 'cgCompositing',
-  //     categoryId: 8,
-  //     information: null,
-  //     isActive: true,
-  //     createdAt: '2024-01-02T11:35:09.953Z',
-  //     updatedAt: '2024-01-02T11:35:09.953Z',
-  //     skillCategory: {
-  //       id: 8,
-  //       name: 'Compositor/VFX',
-  //       key: 'compositorvfx',
-  //       isActive: true,
-  //       createdAt: '2024-01-02T11:35:09.937Z',
-  //       updatedAt: '2024-01-02T11:35:09.937Z',
-  //     },
-  //   },
-  // ];
-
-//   const handleSkillDetailsData = () => {
-//     console.log('Skill Details');
-//     // handleNext();
-//   };
+  
 
   const handleToggle = (key: any) => {
     setIsOpen((prevIsOpen) => ({
@@ -487,7 +67,13 @@ const SkillsDetails: React.FC = () => {
   //     [demoKey]: !prevState[demoKey],
   //   }));
   // };
+  const handleCancelClick = () => {
+    // Handle cancel action
+};
 
+const handleSubmitClick = () => {
+    // Handle save action
+};
   const handleCheckboxChange = (category: string, itemName: string) => {
     setCheckedItems((prevCheckedItems) => ({
       ...prevCheckedItems,
@@ -497,6 +83,55 @@ const SkillsDetails: React.FC = () => {
 
   return (
     <>
+     <div style={{ margin: '0px', position: 'relative' }}> 
+        <Grid
+          container
+          sx={{
+            position: 'absolute',
+            top: -140,
+            right: 0,
+            justifyContent: 'flex-end',
+            alignItems: 'flex-start',
+          }}
+        >
+          <Button
+            className="common-button-white"
+            type="submit"
+            variant="contained"
+            onClick={handleCancelClick}
+            sx={{
+              width: '167px',
+              height: '44px',
+              marginRight: 1,
+              '&:hover': {
+                color: 'var(--Primary, #2CB512)',
+                backgroundColor: '#fff',
+              },
+            }}
+          >
+            Cancel
+          </Button>
+          <Button
+            className="common-button-green"
+            type="submit"
+            variant="contained"
+            onClick={handleSubmitClick}
+            sx={{
+              width: '121px',
+              height: '44px',
+              marginLeft: 1,
+              '&:hover': {
+                background: 'var(--Primary, #2CB512)',
+              },
+            }}
+          >
+            Submit
+          </Button>
+        
+        </Grid>
+       
+       
+      </div>
     <Box sx={{ p: '20px',backgroundColor:'#FFFFFF',borderRadius:'10px' }}>
 
    
