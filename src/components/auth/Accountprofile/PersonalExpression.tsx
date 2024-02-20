@@ -1,6 +1,6 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { useState, useEffect } from 'react';
-import { Box, Typography, Grid, TextField, Select, MenuItem, Chip,Button } from '@mui/material';
+import { Box, Typography, Grid, TextField, Select, MenuItem, Chip, Button } from '@mui/material';
 import '../../../Assets/css/Common.css';
 import Env from '../../../services/Env';
 import { connect } from 'react-redux';
@@ -20,7 +20,7 @@ const details = {
     "rangeKey": "25hr50hr",
     "bio": "Sample Bio",
     "companyName": ["ABC", "CDE"]
-}
+  }
 };
 
 const PersonalExpression: React.FC<RateExpressionProps> = ({ userAccessToken }) => {
@@ -70,22 +70,31 @@ const PersonalExpression: React.FC<RateExpressionProps> = ({ userAccessToken }) 
 
       const trimmedCompany = companyInput.trim();
       if (trimmedCompany !== '') {
-        setCompanies((prevCompanies: string[]) => [...prevCompanies, trimmedCompany]);
-        setCompanyInput('');
+        setCompanies(prevCompanies => [...prevCompanies, trimmedCompany]); // Update companies array
+        setCompanyInput(''); // Clear company input
       }
     }
   };
+
   const handleCancelClick = () => {
     // Handle cancel action
-};
+  };
 
-const handleSubmitClick = () => {
-    // Handle save action
-};
+  const handleSubmitClick = () => {
+    const formData = {
+      totalExperience: totExperience,
+      rateRange: rate,
+      companies: companies,
+      bio: (document.getElementsByName('bio')[0] as HTMLTextAreaElement).value // Using type assertion to inform TypeScript about the element type
+
+    };
+
+    console.log(formData);
+  };
 
   return (
     <>
-      <div style={{ margin: '0px', position: 'relative' }}> 
+      <div style={{ margin: '0px', position: 'relative' }}>
         <Grid
           container
           sx={{
@@ -129,22 +138,23 @@ const handleSubmitClick = () => {
           >
             Submit
           </Button>
-        
+
+
         </Grid>
-       
-       
+
+
       </div>
-      <Box   sx={{ p: '20px',backgroundColor:'#FFFFFF',borderRadius:'10px' }}>
+      <Box sx={{ p: '20px', backgroundColor: '#FFFFFF', borderRadius: '10px' }}>
         <Grid container spacing={2}>
           <Grid item xs={12} sm={6}>
             <Typography className="lable-name" sx={{ textAlign: 'left', mt: '15px' }}>
               Total Experience
             </Typography>
             <Select sx={{ width: '100%' }} value={`${details.data.experienceInYear} years`} onChange={handleTotalExperienceChange}>
-            <MenuItem value={`${details.data.experienceInYear} years`}>
-    {details.data.experienceInYear} years
-  </MenuItem>
-</Select>
+              <MenuItem value={`${details.data.experienceInYear} years`}>
+                {details.data.experienceInYear} years
+              </MenuItem>
+            </Select>
 
           </Grid>
           <Grid item xs={12} sm={6}>
@@ -152,10 +162,10 @@ const handleSubmitClick = () => {
               Rate Range
             </Typography>
             <Select sx={{ width: '100%' }} value={rate} onChange={handleRateChange}>
-            <MenuItem value={details.data.rangeKey}>
-             {details.data.rangeKey}
-           </MenuItem>
-          </Select>
+              <MenuItem value={details.data.rangeKey}>
+                {details.data.rangeKey}
+              </MenuItem>
+            </Select>
           </Grid>
           <Grid item xs={12}>
             <Typography className="lable-name" sx={{ textAlign: 'left', mt: '30px' }}>
@@ -196,7 +206,7 @@ const handleSubmitClick = () => {
               type="text"
               name="bio"
               placeholder="Type Here..."
-              defaultValue={details.data.bio} // Set default value from details
+              defaultValue={details.data.bio}
               required
             />
           </Grid>
